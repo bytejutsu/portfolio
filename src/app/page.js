@@ -8,6 +8,7 @@ import MyTypewriter from "@/components/Typewriter/MyTypewriter";
 import LottieAnimation from "@/components/LottieAnimation";
 import Glitch from "@/components/Glitch";
 import ContactForm from "@/components/ContactForm";
+import getAssetPath from "@/utils/getAssetPath";
 
 export default function Home() {
     const OPTIONS = { loop: true }
@@ -28,7 +29,7 @@ export default function Home() {
               </div>
               <div className="flex justify-end">
                   <div className="w-96 h-96">
-                      <LottieAnimation src="/lotties/quadcopter.json"/>
+                      <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
                   </div>
               </div>
               <div className="flex">

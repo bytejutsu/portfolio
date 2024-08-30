@@ -1,7 +1,9 @@
+import getAssetPath from "@/utils/getAssetPath.js";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/portfolio',
+    basePath: getAssetPath(''),
     images: {
         unoptimized: true,
     }
