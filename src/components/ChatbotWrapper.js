@@ -1,5 +1,4 @@
 "use client";
-
 import { lazy, Suspense, useEffect, useState } from "react";
 
 const ChatBot = lazy(() => import("react-chatbotify"));

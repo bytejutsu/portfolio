@@ -34,6 +34,8 @@ export default function Navbar() {
                                 alt="Your Company"
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                                 className="h-8 w-auto"
+                                width={50}
+                                height={50}
                             />
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
@@ -74,6 +76,8 @@ export default function Navbar() {
                                         alt=""
                                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                         className="h-8 w-8 rounded-full"
+                                        width={50}
+                                        height={50}
                                     />
                                 </MenuButton>
                             </div>

@@ -1,14 +1,20 @@
+"use client";
+
+
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import ChatbotWrapper from "@/components/ChatbotWrapper/ChatbotWrapper";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
-import PieChart from "@/components/PieChart/PieChart";
+//import PieChart from "@/components/PieChart/PieChart";
 import MyTypewriter from "@/components/Typewriter/MyTypewriter";
 import LottieAnimation from "@/components/LottieAnimation";
 import Glitch from "@/components/Glitch";
 import ContactForm from "@/components/ContactForm";
 import getAssetPath from "@/utils/getAssetPath";
+
+
+import ChatbotWrapper from "@/components/ChatbotWrapper";
+
 
 export default function Home() {
     const OPTIONS = { loop: true }
@@ -20,12 +26,12 @@ export default function Home() {
           <Navbar/>
           <main className="flex-grow">
               <div className="bg-primary">
-                <Hero />
+                  <Hero />
               </div>
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-              <PieChart/>
+              {/* <PieChart/> */}
               <div className="flex justify-center">
-                <MyTypewriter/>
+                  <MyTypewriter/>
               </div>
               <div className="flex justify-end">
                   <div className="w-96 h-96">
@@ -39,7 +45,9 @@ export default function Home() {
                   <ContactForm />
               </div>
           </main>
-          <ChatbotWrapper/>
+          <div>
+              <ChatbotWrapper/>
+          </div>
           <div className="bg-primary">
               <Footer/>
           </div>
