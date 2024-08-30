@@ -1,9 +1,7 @@
-import getAssetPath from "@/utils/getAssetPath.js";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: getAssetPath(''),
+    basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
     images: {
         unoptimized: true,
     }
