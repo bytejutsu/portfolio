@@ -1,10 +1,14 @@
 "use client";
 
 import React from 'react';
-import CanvasJSReact from '@canvasjs/react-charts';
+//import CanvasJSReact from '@canvasjs/react-charts';
+import dynamic from "next/dynamic";
 // var CanvasJSReact = require('@canvasjs/react-charts');
 
-const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+//const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+const CanvasJSChart = dynamic(() => import('@canvasjs/react-charts').then((mod) => mod.CanvasJSChart), { ssr: false });
+
 
 const PieChart = () => {
     const options = {
