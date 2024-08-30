@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
-//import PieChart from "@/components/PieChart/PieChart";
+
 import MyTypewriter from "@/components/Typewriter/MyTypewriter";
 import LottieAnimation from "@/components/LottieAnimation";
 import Glitch from "@/components/Glitch";
@@ -14,6 +14,7 @@ import getAssetPath from "@/utils/getAssetPath";
 
 
 import ChatbotWrapper from "@/components/ChatbotWrapper";
+import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
 
 
 export default function Home() {
@@ -29,7 +30,9 @@ export default function Home() {
                   <Hero />
               </div>
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-              {/* <PieChart/> */}
+              <div className="w-96 h-96">
+                <PieChartWrapper/>
+              </div>
               <div className="flex justify-center">
                   <MyTypewriter/>
               </div>
