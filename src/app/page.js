@@ -15,6 +15,7 @@ import getAssetPath from "@/utils/getAssetPath";
 
 import ChatbotWrapper from "@/components/ChatbotWrapper";
 import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
+import Testimonials from "@/components/Testimonials";
 
 
 export default function Home() {
@@ -43,6 +44,9 @@ export default function Home() {
               </div>
               <div className="flex">
                   <Glitch />
+              </div>
+              <div className="">
+                  <Testimonials />
               </div>
               <div>
                   <ContactForm />
