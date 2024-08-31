@@ -1,0 +1,8 @@
+.cyberpunkButton {
+    color: #ffffff; /* White */
+    background-color: #fcee09;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden;
+}

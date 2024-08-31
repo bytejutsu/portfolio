@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
 
-import MyTypewriter from "@/components/Typewriter/MyTypewriter";
+import MyTypewriter from "@/components/MyTypewriter";
 import LottieAnimation from "@/components/LottieAnimation";
 import Glitch from "@/components/Glitch";
 import ContactForm from "@/components/ContactForm";
