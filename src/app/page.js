@@ -1,7 +1,7 @@
 "use client";
 
 
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
