@@ -27,7 +27,7 @@ export default function Home() {
       <div className="flex flex-col min-h-screen">
           <Navbar/>
           <main className="flex-grow">
-              <div className="bg-primary">
+              <div className="">
                   <Hero />
               </div>
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />

@@ -15,7 +15,9 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        //'hero-image': "url('/public/ByteJutsu-logo-image-only.svg')",
+      },
     },
   },
   plugins: [],
