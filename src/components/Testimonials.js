@@ -4,7 +4,7 @@ export default function Testimonials() {
     return (
         <div>
             <section id="testimonials" aria-label="What our customers are saying"
-                     className="bg-slate-50 py-20 sm:py-32">
+                     className="bg-primary py-20 sm:py-32">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl md:text-center">
                         <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">What Our

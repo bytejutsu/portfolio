@@ -5,17 +5,13 @@ import Navbar from "@/components/Navbar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
-
-import MyTypewriter from "@/components/MyTypewriter";
 import LottieAnimation from "@/components/LottieAnimation";
-import Glitch from "@/components/Glitch";
 import ContactForm from "@/components/ContactForm";
 import getAssetPath from "@/utils/getAssetPath";
-
-
 import ChatbotWrapper from "@/components/ChatbotWrapper";
 import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
 import Testimonials from "@/components/Testimonials";
+import GlitchText from "@/components/GlitchText/GlitchText";
 
 
 export default function Home() {
@@ -30,26 +26,33 @@ export default function Home() {
               <div className="">
                   <Hero />
               </div>
-              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-              <div className="w-96 h-96">
-                <PieChartWrapper/>
+              <div className="bg-tertiary">
+                <EmblaCarousel slides={SLIDES} options={OPTIONS} />
               </div>
-              <div className="flex justify-center">
-                  <MyTypewriter/>
-              </div>
-              <div className="flex justify-end">
-                  <div className="w-96 h-96">
-                      <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
+              <div className="bg-black">
+                  <div className="flex">
+                      <div className="text-7xl text-white">
+                        <GlitchText/>
+                      </div>
                   </div>
               </div>
-              <div className="flex">
-                  <Glitch />
+              <div className="bg-primary">
+                  <Testimonials/>
+                  <div className="flex justify-center">
+                      <div className="w-96 h-96">
+                          <PieChartWrapper/>
+                      </div>
+                  </div>
               </div>
-              <div className="">
-                  <Testimonials />
+              <div className="bg-black">
+                  <div className="flex justify-end">
+                      <div className="w-96 h-96">
+                          <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
+                      </div>
+                  </div>
               </div>
               <div>
-                  <ContactForm />
+                  <ContactForm/>
               </div>
           </main>
           <div>
