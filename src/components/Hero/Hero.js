@@ -1,10 +1,11 @@
 import MyTypewriter from "@/components/MyTypewriter";
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
+import getAssetPath from "@/utils/getAssetPath";
 
 export default function Hero() {
     return (
         <div className="bg-primary">
-            <div className="relative bg-[url('/ByteJutsu-logo-image-only-cropped-svg.svg')] bg-contain bg-no-repeat bg-left">
+            <div className="relative bg-contain bg-no-repeat bg-left" style={{ backgroundImage: `url('${getAssetPath('/hero-image.svg')}')`}}>
                 <div className="bg-opacity-50">
                     <div className="container flex flex-col py-32">
                         <div className="flex flex-col justify-end items-end mx-12 mb-10">
@@ -13,7 +14,7 @@ export default function Hero() {
                             </h1>
                             <MyTypewriter />
                         </div>
-                        <div className="flex justify-center items-center">
+                        <div className="flex justify-end items-center">
                             <CyberpunkButton buttonStyles={{
                                 backgroundColor: 'black',
                                 fontWeight: 'bold',
