@@ -11,7 +11,7 @@ import getAssetPath from "@/utils/getAssetPath";
 import ChatbotWrapper from "@/components/ChatbotWrapper";
 import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
 import Testimonials from "@/components/Testimonials";
-import GlitchText from "@/components/GlitchText/GlitchText";
+import Spline from "@splinetool/react-spline";
 
 
 export default function Home() {
@@ -24,17 +24,10 @@ export default function Home() {
           <Navbar/>
           <main className="flex-grow">
               <div className="">
-                  <Hero />
+                  <Hero/>
               </div>
               <div className="bg-tertiary">
-                <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-              </div>
-              <div className="bg-black">
-                  <div className="flex">
-                      <div className="text-7xl text-white">
-                        <GlitchText/>
-                      </div>
-                  </div>
+                  <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
               </div>
               <div className="bg-primary">
                   <Testimonials/>
@@ -50,6 +43,9 @@ export default function Home() {
                           <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
                       </div>
                   </div>
+              </div>
+              <div className="bg-black">
+                  <Spline scene="https://prod.spline.design/i8eNphGELT2tDQVT/scene.splinecode"/>
               </div>
               <div>
                   <ContactForm/>
