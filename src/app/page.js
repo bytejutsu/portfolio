@@ -12,6 +12,7 @@ import ChatbotWrapper from "@/components/ChatbotWrapper";
 import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
 import Testimonials from "@/components/Testimonials";
 import Spline from "@splinetool/react-spline";
+import DonutChart from "@/components/DonutChart/DonutChart";
 
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
                   <Testimonials/>
                   <div className="flex justify-center">
                       <div className="w-96 h-96">
-                          <PieChartWrapper/>
+                          <DonutChart />
                       </div>
                   </div>
               </div>
