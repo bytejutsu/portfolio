@@ -1,4 +1,9 @@
 import React from "react";
+import getAssetPath from "@/utils/getAssetPath";
+import { FaFacebookSquare } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
+import { FaFacebookMessenger } from "react-icons/fa";
+
 
 const Footer = () => {
     const date = new Date().getFullYear();
@@ -17,7 +22,7 @@ const Footer = () => {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <polygon
-                        className="text-[#FCEE09] bg-[#FCEE09] fill-current"
+                        className="text-primary bg-primary fill-current"
                         points="2560 0 2560 100 0 100"
                     ></polygon>
                 </svg>
@@ -25,11 +30,7 @@ const Footer = () => {
             <div className="mx-auto px-4">
                 <div className="flex flex-col">
                     <div className="flex flex-col justify-around items-center lg:flex-row">
-                        <div className="flex flex-row w-1/2 lg:w-1/3 justify-center">
-                            <div className="w-1/2 lg:w-1/3">
-                                <img src="./logo_1.svg" alt="Logo" />
-                            </div>
-                        </div>
+                        <div className="lg:w-1/3"></div>
                         <div className="flex flex-col justify-between h-full lg:w-1/3">
                             <div className="w-full px-4">
                                 <h4 className="text-5xl text-center font-semibold text-black">
@@ -43,27 +44,31 @@ const Footer = () => {
                                         className="text-black text-3xl font-normal h-10 w-10 items-center justify-center align-center outline-none focus:outline-none mr-2 p-3 hover:text-white"
                                         type="button"
                                     >
-                                        <i className="flex fab fa-facebook-square"></i>
+                                        <FaFacebookSquare/>
                                     </button>
                                     <button
                                         className="text-black text-3xl font-normal h-10 w-10 items-center justify-center align-center outline-none focus:outline-none mr-2 p-3 hover:text-white"
                                         type="button"
                                     >
-                                        <i className="flex fab fa-linkedin"></i>
+                                        <ImLinkedin/>
                                     </button>
                                     <button
                                         className="text-black text-3xl font-normal h-10 w-10 items-center justify-center align-center outline-none focus:outline-none mr-2 p-3 hover:text-white"
                                         type="button"
                                     >
-                                        <i className="flex fa-brands fa-facebook-messenger"></i>
+                                        <FaFacebookMessenger/>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:w-1/3"></div>
+                        <div className="flex flex-row w-1/2 lg:w-1/3 justify-center">
+                            <div className="w-1/2 lg:w-1/2">
+                                <img src={getAssetPath('logo.svg')} alt="Logo"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr className="my-6 border-black" />
+                <hr className="my-6 border-black"/>
                 <div className="flex flex-wrap items-center justify-center">
                     <div className="w-full md:w-4/12 px-4 mx-auto text-center">
                         <div className="text-sm text-black font-semibold py-1">
