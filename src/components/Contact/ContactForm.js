@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const ContactForm = () => {
                 <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
                     <div className="w-full lg:w-6/12 px-4">
                         <form onSubmit={submitEmail}>
-                            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg shadow-[#00F0FF] bg-[#FCEE09] neon-border">
+                            <div className={`relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg shadow-[#00F0FF] bg-[#FCEE09] ${styles.neonBorder}`}>
                                 <div className="flex-auto p-5 lg:p-10">
                                     <h4 className="text-2xl font-bold text-center">
                                         Send us a message

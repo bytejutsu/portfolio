@@ -6,13 +6,14 @@ import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
 import LottieAnimation from "@/components/LottieAnimation";
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/Contact/ContactForm";
 import getAssetPath from "@/utils/getAssetPath";
 import ChatbotWrapper from "@/components/ChatbotWrapper";
 import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
 import Testimonials from "@/components/Testimonials";
 import Spline from "@splinetool/react-spline";
 import DonutChart from "@/components/DonutChart/DonutChart";
+import ContactHeaderSection from "@/components/Contact/ContactHeaderSection";
 
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
                       </div>
                   </div>
               </div>
-              <div className="bg-black">
+              <div className="bg-[#2F2E30]">
                   <div className="flex justify-end">
                       <div className="w-96 h-96">
                           <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
@@ -46,9 +47,12 @@ export default function Home() {
                   </div>
               </div>
               <div className="bg-black">
-                  <Spline scene="https://prod.spline.design/i8eNphGELT2tDQVT/scene.splinecode"/>
+                  <div className="">
+                    <Spline scene="https://prod.spline.design/sa5kX2oQmtlkrCJo/scene.splinecode"/>
+                  </div>
               </div>
               <div>
+                  <ContactHeaderSection />
                   <ContactForm/>
               </div>
           </main>
