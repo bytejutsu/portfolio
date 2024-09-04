@@ -3,6 +3,7 @@ import LottieAnimation from "@/components/LottieAnimation";
 import getAssetPath from "@/utils/getAssetPath";
 import styles from "@/app/Globals.module.css";
 import {FaHandshake, FaTrophy} from "react-icons/fa";
+import PartnersRow from "@/components/Partners/PartnersRow";
 
 const PartnersSection = () => {
 
@@ -45,7 +46,7 @@ const PartnersSection = () => {
 
                 <div className="container mx-auto px-4">
                     <div className="mb-20">
-                        {/* <Partners /> Assuming Partners is another component */}
+                        <PartnersRow />
                     </div>
 
                     <div className="flex flex-wrap items-center">
