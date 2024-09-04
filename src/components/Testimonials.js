@@ -35,7 +35,9 @@ export default function Testimonials() {
                                                 </div>
                                             </div>
                                             <div className="overflow-hidden rounded-full bg-slate-50">
-                                                <Image width={50} height={50} alt="" className="h-14 w-14 object-cover"
+                                                <Image width={50} height={50}
+                                                     layout="responsive"
+                                                     alt="" className="h-14 w-14 object-cover"
                                                      style={{color: "transparent"}}
                                                      src="https://randomuser.me/api/portraits/men/15.jpg"/>
                                             </div>
@@ -68,7 +70,11 @@ export default function Testimonials() {
                                                 </div>
                                             </div>
                                             <div className="overflow-hidden rounded-full bg-slate-50">
-                                                <Image width={50} height={50} alt="" className="h-14 w-14 object-cover" style={{color: "transparent"}}
+                                                <Image
+                                                    width={50}
+                                                    height={50}
+                                                    layout="responsive"
+                                                    alt="" className="h-14 w-14 object-cover" style={{color: "transparent"}}
                                                      src="https://randomuser.me/api/portraits/women/15.jpg"/>
                                             </div>
                                         </figcaption>
@@ -100,7 +106,11 @@ export default function Testimonials() {
                                                 </div>
                                             </div>
                                             <div className="overflow-hidden rounded-full bg-slate-50">
-                                                <Image width={50} height={50} alt="" className="h-14 w-14 object-cover" style={{ color :"transparent"}}
+                                                <Image
+                                                    width={50}
+                                                    height={50}
+                                                    layout="responsive"
+                                                    alt="" className="h-14 w-14 object-cover" style={{ color :"transparent"}}
                                                      src="https://randomuser.me/api/portraits/men/10.jpg"/>
                                             </div>
                                         </figcaption>

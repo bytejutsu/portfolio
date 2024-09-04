@@ -40,9 +40,7 @@ const PartnersSection = () => {
                 </div>
 
                 {/* Uncomment if Globe component is implemented */}
-                {/* <div className="w-full h-[500px]">
-            <Globe />
-        </div> */}
+                {/* <div className="w-full h-[500px]"><Globe /></div> */}
 
                 <div className="container mx-auto px-4">
                     <div className="mb-20">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from '@/app/Globals.module.css';
+import getAssetPath from "@/utils/getAssetPath";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -107,7 +108,11 @@ const ContactForm = () => {
                                     </div>
                                     <div className="flex justify-center mt-6">
                                         <div className="w-3/4">
-                                            <button className="cp-btn cp-btn--cyan" type="submit">
+                                            <button
+                                                className={`${styles.cpBtn}`}
+                                                style={{ borderImage: `url(${getAssetPath('./cp-btn-cyan.svg')}) 0 20 fill`, color: '#00f0ff' }}
+                                                type="submit"
+                                            >
                                                 <span>Send Message_</span>
                                             </button>
                                         </div>

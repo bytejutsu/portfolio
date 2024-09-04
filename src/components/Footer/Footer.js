@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/Image';
 import getAssetPath from "@/utils/getAssetPath";
 import { FaFacebookSquare } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
@@ -63,7 +64,13 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-row w-1/2 lg:w-1/3 justify-center">
                             <div className="w-1/2 lg:w-1/2">
-                                <img src={getAssetPath('logo.svg')} alt="Logo"/>
+                                <Image
+                                    width={250}
+                                    height={250}
+                                    layout="responsive"
+                                    src={getAssetPath('./logo.svg')}
+                                    alt="Logo"
+                                />
                             </div>
                         </div>
                     </div>
