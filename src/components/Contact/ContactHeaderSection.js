@@ -1,10 +1,9 @@
 import React from 'react';
-import styles from './ContactHeaderSection.module.css';
+import styles from '@/app/Globals.module.css';
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
 import { FaMicrochip } from "react-icons/fa6";
 import {FaMedal, FaRocket} from "react-icons/fa";
 import {BsGraphUpArrow} from "react-icons/bs";
-import Spline from "@splinetool/react-spline";
 
 const ContactHeaderSection = () => {
     return (

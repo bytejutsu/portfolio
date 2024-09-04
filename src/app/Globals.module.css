@@ -1,0 +1,55 @@
+.neonText {
+    color: #00f0ff;
+    text-shadow:
+            0 0 2px #08f,
+            0 0 2px #08f,
+            0 0 2px #08f,
+            0 0 2px #08f;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%,
+    100% {
+        text-shadow:
+                0 0 2px #08f,
+                0 0 2px #08f,
+                0 0 2px #08f,
+                0 0 2px #08f;
+    }
+    50% {
+        text-shadow:
+                0 0 4px #08f,
+                0 0 4px #08f,
+                0 0 4px #08f,
+                0 0 4px #08f;
+    }
+}
+
+.neonBorder {
+    border: 8px solid #00f0ff;
+    box-shadow:
+            0 0 5px #08f,
+            0 0 10px #08f,
+            0 0 15px #08f,
+            0 0 20px #08f;
+    animation: flickerBorder 1.5s infinite alternate;
+}
+
+@keyframes flickerBorder {
+    0%,
+    100% {
+        box-shadow:
+                0 0 5px #08f,
+                0 0 10px #08f,
+                0 0 15px #08f,
+                0 0 20px #08f;
+    }
+    50% {
+        box-shadow:
+                0 0 10px #08f,
+                0 0 20px #08f,
+                0 0 30px #08f,
+                0 0 40px #08f;
+    }
+}

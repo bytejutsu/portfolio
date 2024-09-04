@@ -14,6 +14,7 @@ import Testimonials from "@/components/Testimonials";
 import Spline from "@splinetool/react-spline";
 import DonutChart from "@/components/DonutChart/DonutChart";
 import ContactHeaderSection from "@/components/Contact/ContactHeaderSection";
+import PartnersSection from "@/components/Partners/PartnersSection";
 
 
 export default function Home() {
@@ -39,16 +40,10 @@ export default function Home() {
                       </div>
                   </div>
               </div>
-              <div className="bg-[#2F2E30]">
-                  <div className="flex justify-end">
-                      <div className="w-96 h-96">
-                          <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
-                      </div>
-                  </div>
-              </div>
+              <PartnersSection />
               <div className="bg-black">
                   <div className="">
-                    <Spline scene="https://prod.spline.design/sa5kX2oQmtlkrCJo/scene.splinecode"/>
+                    <Spline scene="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"/>
                   </div>
               </div>
               <div>
