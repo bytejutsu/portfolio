@@ -5,16 +5,14 @@ import Navbar from "@/components/Navbar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
 import Hero from "@/components/Hero/Hero";
-import LottieAnimation from "@/components/LottieAnimation";
 import ContactForm from "@/components/Contact/ContactForm";
-import getAssetPath from "@/utils/getAssetPath";
 import ChatbotWrapper from "@/components/ChatbotWrapper";
-import PieChartWrapper from "@/components/PieChartWrapper/PieChartWrapper";
-import Testimonials from "@/components/Testimonials";
 import Spline from "@splinetool/react-spline";
-import DonutChart from "@/components/DonutChart/DonutChart";
 import ContactHeaderSection from "@/components/Contact/ContactHeaderSection";
 import PartnersSection from "@/components/Partners/PartnersSection";
+import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
+import ThreeDimentionSection from "@/components/3D/ThreeDimentionSection";
+import ContactSection from "@/components/Contact/ContactSection";
 
 
 export default function Home() {
@@ -32,26 +30,12 @@ export default function Home() {
               <div className="bg-tertiary">
                   <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
               </div>
-              <div className="bg-primary">
-                  <Testimonials/>
-                  <div className="flex justify-center">
-                      <div className="w-96 h-96">
-                          <DonutChart />
-                      </div>
-                  </div>
-              </div>
+              <TestimonialsSection />
               <PartnersSection />
-              <div className="bg-black">
-                  <div className="">
-                    <Spline scene="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"/>
-                  </div>
-              </div>
-              <div>
-                  <ContactHeaderSection />
-                  <ContactForm/>
-              </div>
+              <ThreeDimentionSection />
+              <ContactSection />
           </main>
-          <div>
+          <div className="z-10">
               <ChatbotWrapper/>
           </div>
           <div className="bg-primary">

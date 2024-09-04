@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Testimonials() {
+export default function TestimonialsVar() {
     return (
         <div>
             <section id="testimonials" aria-label="What our customers are saying"
@@ -36,7 +36,6 @@ export default function Testimonials() {
                                             </div>
                                             <div className="overflow-hidden rounded-full bg-slate-50">
                                                 <Image width={50} height={50}
-                                                     layout="responsive"
                                                      alt="" className="h-14 w-14 object-cover"
                                                      style={{color: "transparent"}}
                                                      src="https://randomuser.me/api/portraits/men/15.jpg"/>
@@ -73,7 +72,6 @@ export default function Testimonials() {
                                                 <Image
                                                     width={50}
                                                     height={50}
-                                                    layout="responsive"
                                                     alt="" className="h-14 w-14 object-cover" style={{color: "transparent"}}
                                                      src="https://randomuser.me/api/portraits/women/15.jpg"/>
                                             </div>
@@ -109,7 +107,6 @@ export default function Testimonials() {
                                                 <Image
                                                     width={50}
                                                     height={50}
-                                                    layout="responsive"
                                                     alt="" className="h-14 w-14 object-cover" style={{ color :"transparent"}}
                                                      src="https://randomuser.me/api/portraits/men/10.jpg"/>
                                             </div>
