@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './TestimonialsSection.module.css';
-import TestimonialsVar from './TestimonialsVar';
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
 import DonutChart from "@/components/DonutChart/DonutChart";
 import Testimonials from "@/components/TestimonialsSection/Testimonials";
+import { FaUserFriends } from "react-icons/fa";
 
 const TestimonialsSection = () => {
     return (
-        <section id="testimonials" className="relative bg-[#FCEE09] pt-20">
+        <section id="testimonials" className="relative bg-primary pt-20">
             {/* Top SVG */}
             <div className="absolute top-0 w-full pointer-events-none" style={{ height: '0rem' }}>
                 <svg
@@ -43,16 +42,14 @@ const TestimonialsSection = () => {
                                 '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
                         }}
                     >
-                        <i className="fas fa-user-friends text-xl"></i>
+                        <FaUserFriends className="text-3xl"/>
                     </CyberpunkButton>
                     <div className="w-full lg:w-6/12 px-4">
                         <h2 className="text-5xl text-black font-semibold">
-                            {/* Assuming you have a translation function in place */}
                             Testimonials
                         </h2>
                         <p className="text-lg leading-relaxed m-4 text-black">
-                            {/* Assuming you have a translation function in place */}
-                            Testimonials Text
+                            Voices of 1000+ Satisfied Partners! At ByteJutsu, we’ve not only built products but also robust relationships with our clientele.
                         </p>
                     </div>
                     <div className="w-[4rem] h-[4rem]"></div>

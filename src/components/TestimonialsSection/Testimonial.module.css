@@ -12,14 +12,14 @@
 .wrapper:before {
     content: "";
     position: absolute;
-    font-family: fontAwesome;
+    font-family: "Arial Black";
     font-size: 50px;
     color: #111;
     background: #fcee09;
 }
 
 .wrapper:after {
-    content: "";
+    content: "\0022";
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
@@ -27,7 +27,7 @@
 }
 
 .wrapper:before {
-    content: "";
+    content: "\0022";
     bottom: 0;
     right: 0;
     transform: translate(50%, 50%);
