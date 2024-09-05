@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import styles from './CyberpunkButton.module.css';
 
-const CyberpunkButton = ({ cutoutCorners = ["top-right", "bottom-left"], buttonStyles = {}, children }) => {
+const CyberpunkButton = ({ cutoutCorners = ["top-right", "bottom-left"], buttonStyles = {}, children, ...restProps }) => {
     const buttonStyle = useMemo(() => {
         const size = "0.65rem"; // Size of the cutouts
 
@@ -29,7 +29,7 @@ const CyberpunkButton = ({ cutoutCorners = ["top-right", "bottom-left"], buttonS
     }, [cutoutCorners, buttonStyles]);
 
     return (
-        <button style={buttonStyle} className={styles.cyberpunkButton}>
+        <button style={buttonStyle} className={styles.cyberpunkButton} {...restProps}>
             {children}
         </button>
     );
