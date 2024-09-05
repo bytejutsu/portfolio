@@ -71,7 +71,3 @@
     width: 100%;
 }
 
-.cpBtnCyan {
-    border-image: url(../../public/cp-btn-cyan.svg) 0 20 fill;
-    color: #00f0ff;
-}

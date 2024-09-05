@@ -1,6 +1,6 @@
 import React from 'react';
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
-import EmblaCarousel from "@/components/EmblaCarousel/EmblaCarousel";
+import EmblaCarousel from "@/components/Projects/EmblaCarousel/EmblaCarousel";
 import styles from "@/app/Globals.module.css";
 import { FaDraftingCompass } from "react-icons/fa";
 

@@ -10,6 +10,7 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import styles from './EmblaCarousel.module.css'
+import ProjectCard from "@/components/Projects/ProjectCard/ProjectCard";
 
 const EmblaCarousel = (props) => {
     const { slides, options } = props
@@ -45,7 +46,7 @@ const EmblaCarousel = (props) => {
                 <div className={styles.embla__container}>
                     {slides.map((index) => (
                         <div className={styles.embla__slide} key={index}>
-                            <div className={styles.embla__slide__number}>{index + 1}</div>
+                            <ProjectCard key={index} />
                         </div>
                     ))}
                 </div>
