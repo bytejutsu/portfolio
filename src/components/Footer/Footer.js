@@ -1,5 +1,7 @@
 import React from "react";
-import Image from 'next/Image';
+
+import Image from 'next/image'
+
 import getAssetPath from "@/utils/getAssetPath";
 import { FaFacebookSquare } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
