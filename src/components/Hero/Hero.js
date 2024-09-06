@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <div className="bg-primary">
             <div className="relative bg-contain bg-no-repeat bg-left"
-                 style={{backgroundImage: `url('${getAssetPath('/hero-image.svg')}')`}}>
+                 style={{backgroundImage: `url('${getAssetPath('./hero-image.svg')}')`}}>
                 <div className="bg-opacity-50">
                     <div className="container flex flex-col py-32">
                         <div className="flex flex-col justify-end items-end mx-12 mb-10">
