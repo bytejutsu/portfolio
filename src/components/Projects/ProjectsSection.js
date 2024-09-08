@@ -30,7 +30,7 @@ const ProjectSection = () => {
                     <FaDraftingCompass className="text-3xl"/>
                 </CyberpunkButton>
                 <div className="w-full lg:w-6/12 px-4">
-                    <h2 className={`text-5xl text-[#00F0FF] font-semibold ${styles.neonText}`}>
+                    <h2 className={`text-7xl text-[#00F0FF] font-semibold ${styles.neonText} font-sans`}>
                         Projects
                     </h2>
                 </div>

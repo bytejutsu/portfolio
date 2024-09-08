@@ -46,7 +46,7 @@ const EmblaCarousel = (props) => {
                 <div className={styles.embla__container}>
                     {slides.map((index) => (
                         <div className={styles.embla__slide} key={index}>
-                            <ProjectCard key={index} />
+                            <ProjectCard key={index} index={index}/>
                         </div>
                     ))}
                 </div>

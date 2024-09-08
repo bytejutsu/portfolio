@@ -29,7 +29,7 @@ const PartnersSection = () => {
                         <FaHandshake className="text-4xl"/>
                     </CyberpunkButton>
                     <div className="w-full lg:w-6/12 px-4">
-                        <h2 className={`text-5xl text-[#00F0FF] font-semibold ${styles.neonText}`}>
+                        <h2 className={`text-7xl text-[#00F0FF] font-sans ${styles.neonText}`}>
                             Partners
                         </h2>
                         <p className="text-lg leading-relaxed m-4 text-gray-200">

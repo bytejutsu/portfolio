@@ -6,6 +6,12 @@ const nextConfig = {
         unoptimized: true,
     },
     reactStrictMode: true,
+    experimental: {
+        appDir: true,
+        fontLoaders: [
+            { loader: "@next/font/google", options: { subsets: ["latin"] } },
+        ],
+    },
 };
 
 export default nextConfig;

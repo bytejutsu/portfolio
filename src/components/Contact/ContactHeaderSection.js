@@ -53,7 +53,7 @@ const ContactHeaderSection = () => {
                                 </CyberpunkButton>
                             </div>
                             <span
-                                className={`${styles.neonText} text-5xl font-semibold text-[#00F0FF] md:order-2`}
+                                className={`${styles.neonText} text-5xl font-sans2 font-semibold text-[#00F0FF] md:order-2`}
                             >
                 Let&apos;s Build Something
               </span>

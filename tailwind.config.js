@@ -16,8 +16,9 @@ module.exports = {
         // Preserve default colors
       },
       fontFamily: {
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ['var(--font-honk-sans)'],
+        sans2: ['var(--font-tomorrow-sans)'],
+        mono: ['var(--font-roboto-mono)'],
       },
       backgroundImage: {
         //'hero-image': "url('/public/ByteJutsu-logo-image-only.svg')",
