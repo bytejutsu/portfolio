@@ -76,7 +76,7 @@ const PartnersSection = () => {
                         <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                             <div className="relative flex flex-col min-w-0 break-words w-full">
                                 <div className="w-96 h-96">
-                                    <LottieAnimation src={getAssetPath('/lotties/quadcopter.json')}/>
+                                    <LottieAnimation src={getAssetPath('./lotties/quadcopter.json')}/>
                                 </div>
                                 <blockquote className="relative p-8 mb-4 bg-primary">
                                     <h4 className="text-xl font-bold text-black">

@@ -37,6 +37,7 @@
     height: var(--slide-height);
     user-select: none;
 }
+
 .embla__controls {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -44,6 +45,7 @@
     gap: 1.2rem;
     margin-top: 1.8rem;
 }
+
 .embla__buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -87,6 +89,7 @@
 .embla__button__next {
 
 }
+
 .embla__dots {
     display: flex;
     flex-wrap: wrap;
@@ -94,34 +97,31 @@
     align-items: center;
     margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
 }
+
 .embla__dot {
     -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
     -webkit-appearance: none;
     appearance: none;
-    background-color: transparent;
+    background-color: #fcee09; /* Yellow background */
     touch-action: manipulation;
     display: inline-flex;
     text-decoration: none;
     cursor: pointer;
     border: 0;
     padding: 0;
-    margin: 0;
-    width: 2.6rem;
-    height: 2.6rem;
+    margin: 10px;
+    width: 40px; /* Width adjusted */
+    height: 10px;  /* Height adjusted */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 0; /* No border radius */
 }
+
 .embla__dot:after {
-    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    content: '';
+    content: none; /* Remove the pseudo-element */
 }
-.embla__dot__selected:after {
-    box-shadow: inset 0 0 0 0.2rem var(--text-body);
+
+.embla__dot__selected {
+    background-color: cyan; /* Cyan background when active */
 }

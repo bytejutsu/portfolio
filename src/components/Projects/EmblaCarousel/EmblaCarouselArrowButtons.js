@@ -47,7 +47,7 @@ export const PrevButton = (props) => {
     const { children, ...restProps } = props
 
     return (
-        <CyberpunkButton {...restProps}>
+        <CyberpunkButton {...restProps} cutoutCorners={["bottom-left"]}>
             <FcPrevious className="text-4xl" />
             {children}
         </CyberpunkButton>
@@ -58,7 +58,7 @@ export const NextButton = (props) => {
     const { children, ...restProps } = props
 
     return (
-        <CyberpunkButton {...restProps} cutoutCorners={["top-left", "bottom-right"]}>
+        <CyberpunkButton {...restProps} cutoutCorners={["bottom-right"]}>
             <FcNext className="text-4xl" />
             {children}
         </CyberpunkButton>
