@@ -12,7 +12,7 @@ export default function ChatbotWrapper() {
     return (
         <>
             {isLoaded && (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<></>}>
                     <ChatBot />
                 </Suspense>
             )}

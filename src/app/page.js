@@ -7,9 +7,10 @@ import Hero from "@/components/Hero/Hero";
 import ChatbotWrapper from "@/components/ChatbotWrapper";
 import TechnologiesSection from "@/components/Partners/TechnologiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
-import ThreeDimentionSection from "@/components/3D/ThreeDimentionSection";
+import ThreeDimensionSection from "@/components/3D/ThreeDimensionSection";
 import ContactSection from "@/components/Contact/ContactSection";
 import ProjectsSection from "@/components/Projects/ProjectsSection";
+import PhaserGame from "@/components/PhaserGame/PhaserGame";
 
 
 export default function Home() {
@@ -22,11 +23,12 @@ export default function Home() {
               <div className="">
                   <Hero/>
               </div>
-              <ProjectsSection />
-              <TestimonialsSection />
-              <TechnologiesSection />
-              <ThreeDimentionSection />
-              <ContactSection />
+              <ProjectsSection/>
+              <TestimonialsSection/>
+              <TechnologiesSection/>
+
+              <ThreeDimensionSection/>
+              <ContactSection/>
           </main>
           <div className="z-10">
               <ChatbotWrapper/>
