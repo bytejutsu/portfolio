@@ -53,13 +53,13 @@ const ContactHeaderSection = () => {
                                 </CyberpunkButton>
                             </div>
                             <span
-                                className={`${styles.neonText} text-5xl font-sans2 font-semibold text-[#00F0FF] md:order-2`}
+                                className={`${styles.neonText} text-5xl font-sans2 font-bold text-[#00F0FF] md:order-2`}
                             >
                 Let&apos;s Build Something
               </span>
                             <div className="w-[4rem] h-[2rem] md:order-1"></div>
                         </div>
-                        <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-200">
+                        <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-200 font-mono font-bold">
                             Let&apos;s Build Something Together
                         </p>
                     </div>
@@ -84,7 +84,7 @@ const ContactHeaderSection = () => {
                         >
                             <FaMedal className="text-xl"/>
                         </CyberpunkButton>
-                        <h6 className="text-xl my-5 font-semibold text-white">
+                        <h6 className="text-xl my-5 font-semibold text-white font-sans2">
                             1. Excellent Services
                         </h6>
                     </div>
@@ -107,7 +107,7 @@ const ContactHeaderSection = () => {
                         >
                             <FaRocket className="text-xl" />
                         </CyberpunkButton>
-                        <h5 className="text-xl my-5 font-semibold text-white">
+                        <h5 className="text-xl my-5 font-semibold text-white font-sans2">
                             2. Product Launching
                         </h5>
                     </div>
@@ -130,7 +130,7 @@ const ContactHeaderSection = () => {
                         >
                             <BsGraphUpArrow className="text-xl"/>
                         </CyberpunkButton>
-                        <h5 className="text-xl my-5 font-semibold text-white">
+                        <h5 className="text-xl my-5 font-semibold text-white font-sans2">
                             3. Market Growth
                         </h5>
                     </div>

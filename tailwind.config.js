@@ -19,6 +19,7 @@ module.exports = {
         sans: ['var(--font-honk-sans)'],
         sans2: ['var(--font-tomorrow-sans)'],
         mono: ['var(--font-roboto-mono)'],
+        mono2: ['var(--font-martian-mono)']
       },
       backgroundImage: {
         //'hero-image': "url('/public/ByteJutsu-logo-image-only.svg')",

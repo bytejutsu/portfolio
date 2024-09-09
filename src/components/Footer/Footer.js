@@ -36,10 +36,10 @@ const Footer = () => {
                         <div className="lg:w-1/3"></div>
                         <div className="flex flex-col justify-between h-full lg:w-1/3">
                             <div className="w-full px-4">
-                                <h4 className="text-5xl text-center font-semibold text-black">
+                                <h4 className="text-5xl text-center font-bold text-black font-mono">
                                     Keep in Touch
                                 </h4>
-                                <h5 className="text-lg text-center mt-4 mb-2 text-black">
+                                <h5 className="text-lg text-center mt-4 mb-2 text-black font-mono">
                                     Stay updated with our latest news
                                 </h5>
                                 <div className="flex flex-row justify-center space-x-16 my-12">

@@ -31,15 +31,15 @@ const ContactForm = () => {
                         <form onSubmit={submitEmail}>
                             <div className={`relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg shadow-[#00F0FF] bg-[#FCEE09] ${styles.neonBorder}`}>
                                 <div className="flex-auto p-5 lg:p-10">
-                                    <h4 className="text-2xl font-bold text-center">
+                                    <h4 className="text-2xl font-bold text-center font-sans2">
                                         Send us a message
                                     </h4>
-                                    <p className="leading-relaxed mt-1 mb-4 text-gray-800 text-center">
+                                    <p className="leading-relaxed mt-1 mb-4 text-gray-800 text-center font-sans2">
                                         Complete the form below to get in touch with us.
                                     </p>
                                     <div className="relative w-full mb-3 mt-8">
                                         <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2"
+                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
                                             htmlFor="name"
                                         >
                                             Name
@@ -62,7 +62,7 @@ const ContactForm = () => {
                                     </div>
                                     <div className="relative w-full mb-3">
                                         <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2"
+                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
                                             htmlFor="email"
                                         >
                                             Email
@@ -85,7 +85,7 @@ const ContactForm = () => {
                                     </div>
                                     <div className="relative w-full mb-3">
                                         <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2"
+                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
                                             htmlFor="message"
                                         >
                                             Message
@@ -113,7 +113,7 @@ const ContactForm = () => {
                                                 style={{ borderImage: `url(${getAssetPath('./cp-btn-cyan.svg')}) 0 20 fill`, color: '#00f0ff' }}
                                                 type="submit"
                                             >
-                                                <span>Send Message_</span>
+                                                <span className="font-sans2">Send Message_</span>
                                             </button>
                                         </div>
                                     </div>

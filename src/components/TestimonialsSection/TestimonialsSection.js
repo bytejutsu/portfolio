@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
                         <h2 className={`text-7xl font-sans`}>
                             Testimonials
                         </h2>
-                        <p className="text-lg leading-relaxed m-4 text-black">
+                        <p className="text-lg leading-relaxed m-4 text-black font-bold font-mono">
                             Voices of 1000+ Satisfied Partners! At ByteJutsu, we’ve not only built products but also robust relationships with our clientele.
                         </p>
                     </div>

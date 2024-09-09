@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter, Roboto_Mono, Honk, Tomorrow } from 'next/font/google'
+import { Inter, Roboto_Mono, Honk, Tomorrow, Martian_Mono } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,6 +26,12 @@ const tomorrow_sans = Tomorrow({
   variable: '--font-tomorrow-sans'
 });
 
+const martian_mono = Martian_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-martian-mono'
+});
+
 export const metadata = {
   title: "ByteJutsu",
   description: "Welcome to ByteJutsu",
@@ -33,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto_mono.variable} ${honk_sans.variable} ${tomorrow_sans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${roboto_mono.variable} ${honk_sans.variable} ${tomorrow_sans.variable} ${martian_mono.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );

@@ -32,7 +32,7 @@ const PartnersSection = () => {
                         <h2 className={`text-7xl text-[#00F0FF] font-sans ${styles.neonText}`}>
                             Partners
                         </h2>
-                        <p className="text-lg leading-relaxed m-4 text-gray-200">
+                        <p className="text-lg leading-relaxed m-4 text-gray-200 font-bold font-mono">
                             Collaborating with the Best to Deliver Excellence! At ByteJutsu, we forge alliances with the crème de la crème in the field.
                         </p>
                     </div>
@@ -66,10 +66,10 @@ const PartnersSection = () => {
                             >
                                 <FaTrophy className="text-2xl" />
                             </CyberpunkButton>
-                            <h3 className="text-3xl text-white mb-2 font-semibold leading-normal">
+                            <h3 className="text-3xl text-white mb-2 font-semibold leading-normal font-mono">
                                 Dedicated Team
                             </h3>
-                            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-200">
+                            <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-200 font-bold font-mono">
                                 Our team is dedicated to ensuring a positive and productive partnership.
                             </p>
                         </div>
@@ -79,10 +79,10 @@ const PartnersSection = () => {
                                     <LottieAnimation src={getAssetPath('./lotties/quadcopter.json')}/>
                                 </div>
                                 <blockquote className="relative p-8 mb-4 bg-primary">
-                                    <h4 className="text-xl font-bold text-black">
+                                    <h4 className="text-xl font-bold text-black font-sans2">
                                         Top Notch Services
                                     </h4>
-                                    <p className="text-md font-light mt-2 text-black">
+                                    <p className="text-md font-light mt-2 text-black font-sans2">
                                         Experience Unparalleled, Flexible, and Innovative Solutions with ByteJutsu! Our
                                         services are meticulously crafted to be nothing but top-notch.
                                     </p>
