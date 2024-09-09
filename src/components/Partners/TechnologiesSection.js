@@ -3,7 +3,6 @@ import LottieAnimation from "@/components/LottieAnimation";
 import getAssetPath from "@/utils/getAssetPath";
 import styles from "@/app/Globals.module.css";
 import {FaHandshake, FaTrophy} from "react-icons/fa";
-import PartnersRow from "@/components/Partners/PartnersRow";
 import TechnologiesBanner from "@/components/Partners/TechnologiesBanner";
 
 const TechnologiesSection = () => {
