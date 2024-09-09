@@ -4,8 +4,9 @@ import getAssetPath from "@/utils/getAssetPath";
 import styles from "@/app/Globals.module.css";
 import {FaHandshake, FaTrophy} from "react-icons/fa";
 import PartnersRow from "@/components/Partners/PartnersRow";
+import TechnologiesBanner from "@/components/Partners/TechnologiesBanner";
 
-const PartnersSection = () => {
+const TechnologiesSection = () => {
 
     return (
         <section id="partners" className="bg-black pt-20 pb-48">
@@ -30,10 +31,10 @@ const PartnersSection = () => {
                     </CyberpunkButton>
                     <div className="w-full lg:w-6/12 px-4">
                         <h2 className={`text-7xl text-[#00F0FF] font-sans ${styles.neonText}`}>
-                            Partners
+                            Technologies
                         </h2>
                         <p className="text-lg leading-relaxed m-4 text-gray-200 font-bold font-mono">
-                            Collaborating with the Best to Deliver Excellence! At ByteJutsu, we forge alliances with the crème de la crème in the field.
+                            Utilizing the Best Technologies and Tools to Deliver Excellence! At ByteJutsu, we forge alliances with the crème de la crème in the field.
                         </p>
                     </div>
                     <div className="w-[4rem] h-[4rem]"></div>
@@ -44,7 +45,7 @@ const PartnersSection = () => {
 
                 <div className="container mx-auto px-4">
                     <div className="mb-20">
-                        <PartnersRow />
+                        <TechnologiesBanner />
                     </div>
 
                     <div className="flex flex-wrap items-center">
@@ -112,4 +113,4 @@ const PartnersSection = () => {
     );
 };
 
-export default PartnersSection;
+export default TechnologiesSection;

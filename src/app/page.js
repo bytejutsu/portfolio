@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import ChatbotWrapper from "@/components/ChatbotWrapper";
-import PartnersSection from "@/components/Partners/PartnersSection";
+import TechnologiesSection from "@/components/Partners/TechnologiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
 import ThreeDimentionSection from "@/components/3D/ThreeDimentionSection";
 import ContactSection from "@/components/Contact/ContactSection";
@@ -24,7 +24,7 @@ export default function Home() {
               </div>
               <ProjectsSection />
               <TestimonialsSection />
-              <PartnersSection />
+              <TechnologiesSection />
               <ThreeDimentionSection />
               <ContactSection />
           </main>
