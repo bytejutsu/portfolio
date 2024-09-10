@@ -1,6 +1,6 @@
 "use client";
 
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter';
 
 const MyTypewriter = () => {
 
@@ -8,11 +8,10 @@ const MyTypewriter = () => {
     const handleDone = () => {};
 
     return (
-        <div className='App'>
-            <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'bold', fontSize: '72px' }}>
+        <div className='w-full max-w-[780px]'>
+            <h1 className='pt-0 mx-auto font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
                 Life is simple{' '}
-                <span style={{ color: 'red', fontWeight: 'bold' }}>
-              {/* Style will be inherited from the parent element */}
+                <span className='text-red-600 font-bold'>
                     <Typewriter
                         words={['Eat', 'Sleep', 'Code', 'Repeat!']}
                         loop={0}
@@ -24,7 +23,7 @@ const MyTypewriter = () => {
                         onLoopDone={handleDone}
                         onType={handleType}
                     />
-            </span>
+                </span>
             </h1>
         </div>
     );
