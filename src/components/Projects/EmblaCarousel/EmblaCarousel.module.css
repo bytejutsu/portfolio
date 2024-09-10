@@ -131,3 +131,30 @@
 .embla__dot__selected {
     background-color: cyan; /* Cyan background when active */
 }
+
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .embla__controls {
+        display: flex;
+        flex-direction: column; /* Stack buttons on top of dots */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        margin: 1rem; /* Adjust margins for smaller screens */
+        gap: 1rem; /* Gap between buttons and dots */
+    }
+
+    .embla__buttons {
+        display: flex;
+        flex-direction: row; /* Keep buttons next to each other in a row */
+        justify-content: center; /* Center the buttons */
+        gap: 0.6rem; /* Space between Prev and Next buttons */
+    }
+
+    .embla__dots {
+        display: flex;
+        justify-content: center; /* Center dots */
+        margin: 0; /* Remove margin to keep them centered */
+    }
+}

@@ -29,7 +29,7 @@ const TechnologiesSection = () => {
                         <FaHandshake className="text-4xl"/>
                     </CyberpunkButton>
                     <div className="w-full lg:w-6/12 px-4">
-                        <h2 className={`text-7xl text-[#00F0FF] font-sans ${styles.neonText}`}>
+                        <h2 className={`text-6xl lg:text-7xl text-center text-[#00F0FF] font-sans ${styles.neonText}`}>
                             Technologies
                         </h2>
                         <p className="text-lg leading-relaxed m-4 text-gray-200 font-bold font-mono">
