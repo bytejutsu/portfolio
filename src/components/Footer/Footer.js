@@ -65,7 +65,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="flex flex-row w-1/2 lg:w-1/3 justify-center">
-                            <div className="w-1/2 lg:w-1/2">
+                            <div className="w-2/3 lg:w-1/2">
                                 <Image
                                     width={250}
                                     height={250}
