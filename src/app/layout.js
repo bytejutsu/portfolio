@@ -39,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto_mono.variable} ${honk_sans.variable} ${tomorrow_sans.variable} ${martian_mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${roboto_mono.variable} ${honk_sans.variable} ${tomorrow_sans.variable} ${martian_mono.variablee}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
