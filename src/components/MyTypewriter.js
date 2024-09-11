@@ -8,7 +8,7 @@ const MyTypewriter = () => {
     const handleDone = () => {};
 
     return (
-        <div className='w-full max-w-[780px]'>
+        <div className='w-[480px] md:w-[780px]'>
             <h1 className='pt-0 mx-auto font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
                 Life is simple{' '}
                 <span className='text-red-600 font-bold'>
