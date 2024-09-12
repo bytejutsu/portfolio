@@ -3,12 +3,49 @@ import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkBut
 import EmblaCarousel from "@/components/Projects/EmblaCarousel/EmblaCarousel";
 import styles from "@/app/Globals.module.css";
 import { FaDraftingCompass } from "react-icons/fa";
+import getAssetPath from "@/utils/getAssetPath";
 
 const ProjectSection = () => {
 
     const OPTIONS = { loop: true }
-    const SLIDE_COUNT = 5
-    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+    const PROJECTS_COUNT = 5
+    const PROJECTS = [
+        {
+            index: 0,
+            name: "Arcade Adventures",
+            description: "An arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+        },
+        {
+            index: 1,
+            name: "Arcade Adventures",
+            description: "An arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+        },
+        {
+            index: 2,
+            name: "Arcade Adventures",
+            description: "An arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+        },
+        {
+            index: 3,
+            name: "Arcade Adventures",
+            description: "An arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+        },
+        {
+            index: 4,
+            name: "Arcade Adventures",
+            description: "An arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+        },
+    ]
 
     return (
         <section id="projects" className="bg-gray-900 relative py-20">
@@ -36,7 +73,7 @@ const ProjectSection = () => {
                 </div>
                 <div className="w-[4rem] h-[4rem]"></div>
             </div>
-            <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
+            <EmblaCarousel slides={PROJECTS} options={OPTIONS}/>
         </section>
     );
 };
