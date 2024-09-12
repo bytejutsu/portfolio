@@ -1,13 +1,13 @@
 import styles from './Testimonial.module.css';
 
-const Testimonial = ({content}) => {
+const Testimonial = ({name, position, company, content}) => {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.title}>
-                Work <small>Hard</small> Play <small>Hard</small>
+            <div className={`font-extrabold ${styles.title}`}>
+                {name} <small className="text-xl font-light">{position} - <span className="font-bold">{company}</span></small>
             </div>
             <div className={styles.description}>
-                <p>
+                <p className="font-semibold">
                     {content}
                 </p>
             </div>
