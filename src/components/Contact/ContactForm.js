@@ -107,7 +107,7 @@ const ContactForm = () => {
                                         </p>
                                     </div>
                                     <div className="flex justify-center mt-6">
-                                        <div className="w-1/2">
+                                        <div className="w-full lg:w-1/2">
                                             <button
                                                 className={`${styles.cpBtn}`}
                                                 style={{ borderImage: `url(${getAssetPath('./cp-btn-cyan.svg')}) 0 20 fill`, color: '#00f0ff' }}

@@ -30,7 +30,7 @@ const ProjectCard = ({ index, name, description, imageUrl, demoUrl }) => {
                 </div>
                 <div className="p-6 pt-0">
                     <div className="flex justify-center">
-                        <div className="w-3/4">
+                        <div className="w-full lg:w-3/4">
                             <a
                                 className={`${styles.cpBtn}`}
                                 href={demoUrl}
