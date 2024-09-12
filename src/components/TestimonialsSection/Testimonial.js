@@ -1,6 +1,6 @@
 import styles from './Testimonial.module.css';
 
-const Testimonial = () => {
+const Testimonial = ({content}) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.title}>
@@ -8,7 +8,7 @@ const Testimonial = () => {
             </div>
             <div className={styles.description}>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio adipisci ducimus? Impedit est dolore maxime unde repudiandae blanditiis veritatis accusamus, in fugit excepturi optio aperiam officia eius, omnis numquam omnis numquam. omnis numquam.
+                    {content}
                 </p>
             </div>
         </div>
