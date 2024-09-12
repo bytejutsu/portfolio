@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
                         <FaUserFriends className="text-3xl"/>
                     </CyberpunkButton>
                     <div className="w-full lg:w-6/12 px-4">
-                        <h2 className="text-6xl lg:text-7xl font-sans">
+                        <h2 className="text-5xl lg:text-7xl text-center font-sans">
                             Testimonials
                         </h2>
                         <p className="text-lg leading-relaxed m-4 text-black font-bold font-mono">
