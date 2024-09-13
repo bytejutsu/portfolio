@@ -2,6 +2,7 @@ import MyTypewriter from "@/components/MyTypewriter";
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
 import getAssetPath from "@/utils/getAssetPath";
 import Image from 'next/image';
+import styles from './Hero.module.css';
 
 export default function Hero() {
     return (
@@ -18,6 +19,9 @@ export default function Hero() {
                         />
                     </div>
                     <div className="flex flex-col justify-around items-center pb-12 space-y-8 md:pt-16 md:items-end">
+                        <div className="w-full">
+                            <div className={`${styles.introSeparatorTop}`}></div>
+                        </div>
                         <h1 className="text-6xl sm:text-8xl md:text-9xl text-black font-black">
                             ByteJutsu
                         </h1>
@@ -37,6 +41,9 @@ export default function Hero() {
                                     margin: '0 20px'
                                 }}>Live Demo</CyberpunkButton>
                             </div>
+                        </div>
+                        <div className="w-full">
+                            <div className={`${styles.introSeparatorBottom}`}></div>
                         </div>
                     </div>
                 </div>
