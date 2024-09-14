@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha"; // Import the reCAPTCHA component
 import styles from '@/app/Globals.module.css';
 import getAssetPath from "@/utils/getAssetPath";
+import * as emailjs from "@emailjs/browser";
+import {
+    EMAIL_JS_PUBLIC_KEY,
+    EMAIL_JS_SERVICE_ID,
+    EMAIL_JS_TEMPLATE_ID,
+    RECAPTCHA_PUBLIC_KEY,
+} from "@/components/Contact/EmailJS";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -9,6 +17,7 @@ const ContactForm = () => {
         message: "",
     });
 
+    const [recaptchaToken, setRecaptchaToken] = useState(null); // State to store reCAPTCHA token
     const nameRemaining = 256 - formData.name.length;
     const emailRemaining = 256 - formData.email.length;
     const messageRemaining = 1024 - formData.message.length;
@@ -17,10 +26,35 @@ const ContactForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const handleRecaptchaChange = (token) => {
+        setRecaptchaToken(token); // Store the reCAPTCHA token on successful completion
+    };
+
     const submitEmail = (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log("Form submitted:", formData);
+
+        if (!recaptchaToken) {
+            alert("Please complete the reCAPTCHA.");
+            return;
+        }
+
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            'g-recaptcha-response': recaptchaToken, // Add the reCAPTCHA token
+        };
+
+        emailjs
+            .send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams, EMAIL_JS_PUBLIC_KEY)
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
     };
 
     return (
@@ -38,10 +72,7 @@ const ContactForm = () => {
                                         Complete the form below to get in touch with us.
                                     </p>
                                     <div className="relative w-full mb-3 mt-8">
-                                        <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
-                                            htmlFor="name"
-                                        >
+                                        <label className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2" htmlFor="name">
                                             Name
                                         </label>
                                         <input
@@ -53,7 +84,6 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="Name"
                                             required
-                                            style={{ transition: "all 0.15s ease 0s" }}
                                             type="text"
                                         />
                                         <p className="text-xs text-gray-600 text-right">
@@ -61,10 +91,7 @@ const ContactForm = () => {
                                         </p>
                                     </div>
                                     <div className="relative w-full mb-3">
-                                        <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
-                                            htmlFor="email"
-                                        >
+                                        <label className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2" htmlFor="email">
                                             Email
                                         </label>
                                         <input
@@ -76,7 +103,6 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="Email"
                                             required
-                                            style={{ transition: "all 0.15s ease 0s" }}
                                             type="email"
                                         />
                                         <p className="text-xs text-gray-600 text-right">
@@ -84,10 +110,7 @@ const ContactForm = () => {
                                         </p>
                                     </div>
                                     <div className="relative w-full mb-3">
-                                        <label
-                                            className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2"
-                                            htmlFor="message"
-                                        >
+                                        <label className="block uppercase text-gray-800 text-xs font-bold mb-2 font-sans2" htmlFor="message">
                                             Message
                                         </label>
                                         <textarea
@@ -106,6 +129,15 @@ const ContactForm = () => {
                                             {messageRemaining}
                                         </p>
                                     </div>
+
+                                    {/* reCAPTCHA */}
+                                    <div className="flex justify-center mt-6">
+                                        <ReCAPTCHA
+                                            sitekey={RECAPTCHA_PUBLIC_KEY} // Replace with your reCAPTCHA site key
+                                            onChange={handleRecaptchaChange}
+                                        />
+                                    </div>
+
                                     <div className="flex justify-center mt-6">
                                         <div className="w-full lg:w-1/2">
                                             <button
