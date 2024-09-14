@@ -1,5 +1,7 @@
 "use client";
 import { lazy, Suspense, useEffect, useState } from "react";
+import getAssetPath from "@/utils/getAssetPath";
+import Image from 'next/image';
 
 const ChatBot = lazy(() => import("react-chatbotify"));
 
@@ -26,6 +28,18 @@ export default function ChatbotWrapper() {
             secondaryColor: '#FF003C',
             fontFamily: 'Arial, sans-serif',
         },
+        header: {
+            title: <h1 className="font-bold text-lg font-sans2">Apex</h1>
+        },
+        footer: {
+            text: <Image
+                width={40}
+                height={40}
+                //layout="responsive"
+                alt="logo"
+                src={getAssetPath('./logo.svg')}
+            />,
+        }
     };
 
     /*
