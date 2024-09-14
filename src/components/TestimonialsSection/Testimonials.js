@@ -3,7 +3,7 @@ import Testimonial from "@/components/TestimonialsSection/Testimonial";
 export default function Testimonials(){
     return (
         <div className="flex flex-wrap">
-            <div className="lg:pt-12 pt-6 w-full lg:w-4/12 px-4 text-center">
+            <div className="xl:pt-12 pt-6 w-full xl:w-4/12 px-4 text-center">
                 <Testimonial
                     name="Sarah Mitchell"
                     position="Senior Software Engineer"
@@ -12,7 +12,7 @@ export default function Testimonials(){
                 I highly recommend ByteJutsu as a consulting and IT solutions company. It has been so important for us as we continue to grow our company.
                 `}/>
             </div>
-            <div className="w-full lg:w-4/12 px-4 text-center">
+            <div className="w-full xl:w-4/12 px-4 text-center">
                 <Testimonial
                     name="Jason Carter"
                     position="Marketing Director"
@@ -21,7 +21,7 @@ export default function Testimonials(){
                 I would recommend ByteJutsu for anyone trying to find or create a custom and efficient software solution for their business. It has saved me so much time!
                 `}/>
             </div>
-            <div className="pt-6 w-full lg:w-4/12 px-4 text-center">
+            <div className="pt-6 w-full xl:w-4/12 px-4 text-center">
                 <Testimonial
                     name="Emily Roberts"
                     position="Business Development Manager"
