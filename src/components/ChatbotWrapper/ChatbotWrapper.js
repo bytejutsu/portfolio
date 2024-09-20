@@ -3,7 +3,6 @@
 import { lazy, Suspense, useEffect, useState, useRef } from "react";
 import getAssetPath from "@/utils/getAssetPath";
 import Image from 'next/image';
-import ReCAPTCHA from "react-google-recaptcha"; // Import the reCAPTCHA component
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
 import * as emailjs from "@emailjs/browser";
@@ -11,7 +10,6 @@ import {
     EMAIL_JS_PUBLIC_KEY,
     EMAIL_JS_SERVICE_ID,
     EMAIL_JS_TEMPLATE_ID,
-    RECAPTCHA_PUBLIC_KEY,
 } from "@/components/ChatbotWrapper/EmailJS";
 
 const ChatBot = lazy(() => import("react-chatbotify"));
@@ -30,7 +28,7 @@ export default function ChatbotWrapper() {
         name: '',
         role: '',
         already_customer: '',
-        services_choices: [],
+        services_choices: '',
         budget: ''
     });
 
@@ -62,29 +60,14 @@ export default function ChatbotWrapper() {
         }
     };
 
-    const sendEmail = async (form) => {
-
-        console.log('sendEmail is triggered');
-
-        if (recaptchaRef.current) {
-            recaptchaRef.current.execute(); // Trigger the invisible reCAPTCHA
-        }
-    };
-
-
-    // Modify the reCAPTCHA onChange handler to send the email once token is received
-    const handleRecaptchaChange = (token) => {
-        setRecaptchaToken(token); // Set the reCAPTCHA token
-
-        // If the token is received, proceed with sending the email
-        if (token) {
+    const sendEmail = () => {
+            console.log('sendEmail is triggered');
             const templateParams = {
                 name: form.name,
-                role: form.role,
-                already_customer: form.already_customer,
-                services_choices: form.services_choices.join(", "), // converting array to string
-                budget: form.budget,
-                'g-recaptcha-response': recaptchaToken, // Add the reCAPTCHA token
+                //role: form.role,
+                //already_customer: form.already_customer,
+                message: form.services_choices, // converting array to string
+                //budget: form.budget,
             };
 
             emailjs
@@ -94,7 +77,6 @@ export default function ChatbotWrapper() {
                         toast.success("Message sent successfully!", {
                             position: "top-right"
                         });
-                        recaptchaRef.current.reset(); // Reset reCAPTCHA after successful submission
                     },
                     (error) => {
                         toast.error("Failed to send message. Please try again.", {
@@ -103,7 +85,6 @@ export default function ChatbotWrapper() {
                         console.error('FAILED...', error.text);
                     }
                 );
-        }
     };
 
     const flow={
@@ -143,7 +124,7 @@ export default function ChatbotWrapper() {
         },
         end: {
             message: "Thank you for your interest, we will get back to you shortly!",
-            function: async (params) => { await sendEmail() },
+            function: (params) => { sendEmail() },
             component: (
                 <div style={formStyle}>
                     <p>Name: {form.name}</p>
@@ -169,15 +150,6 @@ export default function ChatbotWrapper() {
                     />
                 </Suspense>
             )}
-            {/* reCAPTCHA */}
-            <div className="flex justify-center mt-6">
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={RECAPTCHA_PUBLIC_KEY} // Replace with your reCAPTCHA site key
-                    onChange={handleRecaptchaChange}
-                    size="invisible"
-                />
-            </div>
             {/* Toast notifications */}
             <ToastContainer />
         </>
