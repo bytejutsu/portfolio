@@ -158,7 +158,6 @@ const ContactForm = () => {
                                                 className={`${styles.cpBtn}`}
                                                 style={{ borderImage: `url(${getAssetPath('./cp-btn-cyan.svg')}) 0 20 fill`, color: '#00f0ff' }}
                                                 type="submit"
-                                                disabled={!recaptchaToken} // Disable button until reCAPTCHA is completed
                                             >
                                                 <span className="font-sans2">Send Message_</span>
                                             </button>
