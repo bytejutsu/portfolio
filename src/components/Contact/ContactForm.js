@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha"; // Import the reCAPTCHA component
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
 import styles from '@/app/Globals.module.css';
 import getAssetPath from "@/utils/getAssetPath";
 import * as emailjs from "@emailjs/browser";
@@ -22,6 +24,8 @@ const ContactForm = () => {
     const emailRemaining = 256 - formData.email.length;
     const messageRemaining = 1024 - formData.message.length;
 
+    const recaptchaRef = useRef(null);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -34,7 +38,9 @@ const ContactForm = () => {
         e.preventDefault();
 
         if (!recaptchaToken) {
-            alert("Please complete the reCAPTCHA.");
+            toast.error("Please complete the reCAPTCHA.", {
+                position: "top-right"
+            });
             return;
         }
 
@@ -49,10 +55,17 @@ const ContactForm = () => {
             .send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams, EMAIL_JS_PUBLIC_KEY)
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    toast.success("Message sent successfully!", {
+                        position: "top-right"
+                    });
+                    recaptchaRef.current.reset(); // Reset the reCAPTCHA
+                    setFormData({ name: "", email: "", message: "" }); // Reset the form
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    toast.error("Failed to send message. Please try again.", {
+                        position: "top-right"
+                    });
+                    console.error('FAILED...', error.text);
                 }
             );
     };
@@ -133,6 +146,7 @@ const ContactForm = () => {
                                     {/* reCAPTCHA */}
                                     <div className="flex justify-center mt-6">
                                         <ReCAPTCHA
+                                            ref={recaptchaRef}
                                             sitekey={RECAPTCHA_PUBLIC_KEY} // Replace with your reCAPTCHA site key
                                             onChange={handleRecaptchaChange}
                                         />
@@ -144,12 +158,15 @@ const ContactForm = () => {
                                                 className={`${styles.cpBtn}`}
                                                 style={{ borderImage: `url(${getAssetPath('./cp-btn-cyan.svg')}) 0 20 fill`, color: '#00f0ff' }}
                                                 type="submit"
+                                                disabled={!recaptchaToken} // Disable button until reCAPTCHA is completed
                                             >
                                                 <span className="font-sans2">Send Message_</span>
                                             </button>
                                         </div>
                                     </div>
-                                    {/* Google reCAPTCHA can be added here if needed */}
+
+                                    {/* Toast notifications */}
+                                    <ToastContainer />
                                 </div>
                             </div>
                         </form>
