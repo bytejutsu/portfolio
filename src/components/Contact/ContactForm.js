@@ -30,44 +30,46 @@ const ContactForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleRecaptchaChange = (token) => {
-        setRecaptchaToken(token); // Store the reCAPTCHA token on successful completion
-    };
-
     const submitEmail = (e) => {
         e.preventDefault();
 
-        if (!recaptchaToken) {
-            toast.error("Please complete the reCAPTCHA.", {
-                position: "top-right"
-            });
-            return;
+        // Check if reCAPTCHA reference exists and execute it manually
+        if (recaptchaRef.current) {
+            recaptchaRef.current.execute(); // Trigger the invisible reCAPTCHA
         }
+    };
 
-        const templateParams = {
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-            'g-recaptcha-response': recaptchaToken, // Add the reCAPTCHA token
-        };
+// Modify the reCAPTCHA onChange handler to send the email once token is received
+    const handleRecaptchaChange = (token) => {
+        setRecaptchaToken(token); // Set the reCAPTCHA token
 
-        emailjs
-            .send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams, EMAIL_JS_PUBLIC_KEY)
-            .then(
-                () => {
-                    toast.success("Message sent successfully!", {
-                        position: "top-right"
-                    });
-                    recaptchaRef.current.reset(); // Reset the reCAPTCHA
-                    setFormData({ name: "", email: "", message: "" }); // Reset the form
-                },
-                (error) => {
-                    toast.error("Failed to send message. Please try again.", {
-                        position: "top-right"
-                    });
-                    console.error('FAILED...', error.text);
-                }
-            );
+        // If the token is received, proceed with sending the email
+        if (token) {
+            const templateParams = {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+                'g-recaptcha-response': token, // Include the reCAPTCHA token
+            };
+
+            emailjs
+                .send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams, EMAIL_JS_PUBLIC_KEY)
+                .then(
+                    () => {
+                        toast.success("Message sent successfully!", {
+                            position: "top-right"
+                        });
+                        recaptchaRef.current.reset(); // Reset reCAPTCHA after successful submission
+                        setFormData({ name: "", email: "", message: "" }); // Reset form
+                    },
+                    (error) => {
+                        toast.error("Failed to send message. Please try again.", {
+                            position: "top-right"
+                        });
+                        console.error('FAILED...', error.text);
+                    }
+                );
+        }
     };
 
     return (
@@ -149,6 +151,7 @@ const ContactForm = () => {
                                             ref={recaptchaRef}
                                             sitekey={RECAPTCHA_PUBLIC_KEY} // Replace with your reCAPTCHA site key
                                             onChange={handleRecaptchaChange}
+                                            size="invisible"
                                         />
                                     </div>
 
