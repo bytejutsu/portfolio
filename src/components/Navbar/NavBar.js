@@ -12,9 +12,9 @@ const NavBar = () => {
                         backgroundColor: '#000000',
                     }}
                     cutoutCorners={['bottom-left']}
-                    className="transition duration-300 ease-in-out hover:text-[#00f0ff] hover:shadow-neon"
+                    className="transition duration-300 ease-in-out font-sans2 font-semibold text-white hover:text-[#00f0ff] hover:shadow-neon"
                 >
-                    Button Text
+                    Contact Us
                 </CyberpunkButton>
                 <CyberpunkButton
                     buttonStyles={{
@@ -24,8 +24,9 @@ const NavBar = () => {
                         backgroundColor: '#000000',
                     }}
                     cutoutCorners={[]}
+                    className="transition duration-300 ease-in-out font-sans2 font-semibold text-white hover:text-[#00f0ff] hover:shadow-neon"
                 >
-                    Button Text
+                    Technologies
                 </CyberpunkButton>
                 <CyberpunkButton
                     buttonStyles={{
@@ -35,8 +36,9 @@ const NavBar = () => {
                         backgroundColor: '#000000',
                     }}
                     cutoutCorners={[]}
+                    className="transition duration-300 ease-in-out font-sans2 font-semibold text-white hover:text-[#00f0ff] hover:shadow-neon"
                 >
-                    Button Text
+                    Testimonials
                 </CyberpunkButton>
                 <CyberpunkButton
                     buttonStyles={{
@@ -46,8 +48,9 @@ const NavBar = () => {
                         backgroundColor: '#000000',
                     }}
                     cutoutCorners={[]}
+                    className="transition duration-300 ease-in-out font-sans2 font-semibold text-white hover:text-[#00f0ff] hover:shadow-neon"
                 >
-                    Button Text
+                    Projects
                 </CyberpunkButton>
             </div>
         </nav>
