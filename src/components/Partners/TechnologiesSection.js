@@ -8,7 +8,7 @@ import TechnologiesBanner from "@/components/Partners/TechnologiesBanner";
 const TechnologiesSection = () => {
 
     return (
-        <section id="partners" className="bg-black pt-20 pb-48">
+        <section id="technologies" className="bg-black pt-20 pb-48">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-center text-center mb-24">
                     <CyberpunkButton

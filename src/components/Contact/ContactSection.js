@@ -3,9 +3,9 @@ import ContactForm from "@/components/Contact/ContactForm";
 
 export default function ContactSection(){
     return (
-        <div>
+        <section id="contact">
             <ContactHeaderSection/>
             <ContactForm/>
-        </div>
+        </section>
     );
 }
