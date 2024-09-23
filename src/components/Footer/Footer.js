@@ -69,7 +69,10 @@ const Footer = () => {
                                 <Image
                                     width={250}
                                     height={250}
-                                    layout="responsive"
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto', // To maintain aspect ratio
+                                    }}
                                     src={getAssetPath('./logo.svg')}
                                     alt="Logo"
                                 />

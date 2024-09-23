@@ -8,12 +8,16 @@ export default function Hero() {
     return (
         <section className="">
             <div className="bg-primary w-full h-full">
-                <div className="flex flex-col items-center space-y-0 lg:flex-row justify-around">
-                    <div className="mt-32 mb-0 w-1/2 mb-0 lg:w-1/3 lg:mt-0" style={{}}>
+                <div className="flex flex-col items-center space-y-0 lg:flex-row lg:justify-around">
+                    <div className="mt-32 mb-0 w-1/2 lg:w-1/3 lg:mt-0" style={{}}>
                         <Image
                             width={500}
                             height={500}
-                            layout="responsive"
+                            priority
+                            style={{
+                                width: '100%',
+                                height: 'auto', // To maintain aspect ratio
+                            }}
                             alt="logo"
                             src={getAssetPath('./hero-image.svg')}
                         />

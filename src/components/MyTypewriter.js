@@ -9,7 +9,7 @@ const MyTypewriter = () => {
 
     return (
         <div className='w-[330px] sm:w-[500px] md:w-[780px]'>
-            <h1 className='pt-0 mx-auto font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl'>
+            <h1 className='pt-0 mx-auto font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl'>
                 Life is simple{' '}
                 <span className='text-red-600 font-bold'>
                     <Typewriter

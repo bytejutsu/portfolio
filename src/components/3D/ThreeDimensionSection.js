@@ -7,7 +7,7 @@ export default function ThreeDimensionSection() {
     return (
         <section className="bg-black min-h-screen min-w-screen w-full h-full flex justify-center items-center">
             <Suspense fallback={<></>}>
-                <Spline scene={getAssetPath('./robot_arm.spline')} />
+                <Spline scene={getAssetPath('./happy_robot_button.spline')} />
             </Suspense>
         </section>
     );
