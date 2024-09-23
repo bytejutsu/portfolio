@@ -20,13 +20,13 @@ const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScreenMdOrLarger, setIsScreenMdOrLarger] = useState(false);
 
-    // Check if the screen size is larger than md on initial render and on resize
+    const checkScreenSize = () => {
+        setIsScreenMdOrLarger(window.innerWidth >= 768);
+    };
+
     useEffect(() => {
-        const checkScreenSize = () => {
-            setIsScreenMdOrLarger(window.innerWidth >= 768); // 'md' breakpoint is 768px in Tailwind
-        };
-        checkScreenSize(); // Check on initial render
-        window.addEventListener('resize', checkScreenSize); // Check on resize
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
 
         return () => {
             window.removeEventListener('resize', checkScreenSize);
@@ -36,23 +36,21 @@ const NavBar = () => {
     return (
         <nav className="fixed top-0 w-full bg-primary bg-opacity-50 shadow-xl z-50">
             <div className="p-2">
-                {/* Hamburger icon - visible only on small screens (md and below) */}
                 <div className="flex justify-start items-center md:hidden mb-2">
                     <FaBars
                         className="text-black text-2xl cursor-pointer"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle the menu
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-expanded={isMenuOpen}
                     />
                 </div>
 
-                {/* Render flex-col if menu is open and screen size is less than md */}
-                {/* Render flex-row if screen size is md or larger */}
                 <div
                     className={`${
                         isScreenMdOrLarger
-                            ? 'flex-row flex' // Always show flex-row on md+ screens
+                            ? 'flex-row flex'
                             : isMenuOpen
-                                ? 'flex-col-reverse flex' // Show flex-col when menu is open and screen is less than md
-                                : 'hidden' // Hide the stack when menu is closed and screen size is less than md
+                                ? 'flex-col-reverse flex'
+                                : 'hidden'
                     } md:flex-row md:flex md:justify-end`}
                 >
                     {navItems.map((item, index) => (
@@ -65,7 +63,10 @@ const NavBar = () => {
                             }}
                             cutoutCorners={item.cutoutCorners}
                             className="transition duration-300 ease-in-out font-sans2 font-semibold text-white hover:text-[#00f0ff] hover:shadow-neon w-full md:w-48"
-                            onClick={() => handleScroll(item.id)}
+                            onClick={() => {
+                                handleScroll(item.id);
+                                setIsMenuOpen(false); // Close menu after clicking
+                            }}
                         >
                             {item.label}
                         </CyberpunkButton>
@@ -74,6 +75,7 @@ const NavBar = () => {
             </div>
         </nav>
     );
+
 };
 
 export default NavBar;
