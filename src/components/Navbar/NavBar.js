@@ -51,7 +51,7 @@ const NavBar = () => {
                         isScreenMdOrLarger
                             ? 'flex-row flex' // Always show flex-row on md+ screens
                             : isMenuOpen
-                                ? 'flex-col flex' // Show flex-col when menu is open and screen is less than md
+                                ? 'flex-col-reverse flex' // Show flex-col when menu is open and screen is less than md
                                 : 'hidden' // Hide the stack when menu is closed and screen size is less than md
                     } md:flex-row md:flex md:justify-end`}
                 >
