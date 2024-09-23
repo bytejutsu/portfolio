@@ -53,7 +53,7 @@ const NavBar = () => {
                             : isMenuOpen
                                 ? 'flex-col flex' // Show flex-col when menu is open and screen is less than md
                                 : 'hidden' // Hide the stack when menu is closed and screen size is less than md
-                    } md:flex-row md:flex`}
+                    } md:flex-row md:flex md:justify-end`}
                 >
                     {navItems.map((item, index) => (
                         <CyberpunkButton
