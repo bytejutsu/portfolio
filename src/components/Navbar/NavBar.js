@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
 import { FaBars } from 'react-icons/fa'; // Importing the hamburger icon from react-icons
+import styles from './NavBar.module.css';
 
 const navItems = [
     { label: 'Contact Us', id: 'contact', cutoutCorners: ['bottom-left'] },
@@ -38,7 +39,7 @@ const NavBar = () => {
             <div className="p-2">
                 <div className="flex justify-start items-center md:hidden mb-2">
                     <FaBars
-                        className="text-black text-2xl cursor-pointer"
+                        className={`text-black text-2xl cursor-pointer ${isMenuOpen ? styles.rotate180 : styles.rotate180Back}`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-expanded={isMenuOpen}
                     />

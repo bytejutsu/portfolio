@@ -1,0 +1,9 @@
+.rotate180 {
+    transform: rotateZ(180deg);
+    transition: transform 1s ease-in-out;
+}
+
+.rotate180Back {
+    transform: rotateZ(-180deg);
+    transition: transform 1s ease-in-out;
+}
