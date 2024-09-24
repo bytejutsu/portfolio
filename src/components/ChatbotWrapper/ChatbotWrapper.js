@@ -99,7 +99,7 @@ export default function ChatbotWrapper() {
             path: "ask_customer"
         },
         ask_customer: {
-            message: "Are you already a customer of ByteJutsu?",
+            message: "Interesting! Are you already a customer of ByteJutsu?",
             // alternative way to declare options, with sending of output disabled
             // more info here: https://react-chatbotify.com/docs/api/attributes
             // options: {items: ["Yes", "No"], sendOutput: false}
@@ -112,13 +112,13 @@ export default function ChatbotWrapper() {
             message: "Let me know what services are you interested in",
             // alternative way to declare checkboxes, with default configurations (i.e. min 1, max 4, send output and not reusable)
             // more info here: https://react-chatbotify.com/docs/api/attributes
-            checkboxes: {items: ["Consulting", "E-commerce", "Web App", "Mobile App", "Wordpress", "Prestashop", "Digital Marketing" ,"Custom Solution"], min: 1},
+            checkboxes: {items: ["Consulting", "E-commerce", "Web App", "Mobile App", "Wordpress", "Prestashop", "Digital Marketing" ,"Custom Solution", "Other"], min: 1},
             chatDisabled: true,
             function: (params) => setForm({...form, services_choices: params.userInput}),
             path: "ask_budget"
         },
         ask_budget: {
-            message: "what is your budget?",
+            message: "What is your estimated budget?",
             function: (params) => setForm({...form, budget: params.userInput}),
             path: "end"
         },
