@@ -41,7 +41,12 @@ export default function ImageWithModal({ imageUrl, name }) {
 
                         {/* Image with dynamic size */}
                         <div className="flex-grow relative">
-                            <Image src={imageUrl} alt={name} fill className="rounded-md object-contain" />
+                            <Image
+                                src={imageUrl}
+                                alt={name}
+                                fill
+                                style={{ objectFit: 'contain', margin: '2px', padding: '10px' }}
+                            />
                         </div>
                         <div className="flex flex-row justify-center font-sans2">
                             <CyberpunkButton
