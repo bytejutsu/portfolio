@@ -3,23 +3,28 @@ import React from 'react';
 import styles from '@/app/Globals.module.css';
 import getAssetPath from "@/utils/getAssetPath"; // Scoped styles
 import Image from 'next/image';
+import ImageWithModal from "@/components/Projects/ProjectCard/ImageWithModal";
 
 const ProjectCard = ({ index, name, description, imageUrl, demoUrl }) => {
     return (
         <div className="p-10 text-center flex flex-row justify-center">
             <div className="relative flex w-full flex-col rounded-sm bg-[#FCEE09] text-gray-700 shadow-md">
-                <div
-                    className="bg-blue-gray-500 shadow-blue-gray-500/40 relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-border text-white shadow-lg">
-                    <div className="relative w-full h-full">
-                        <Image
-                            className="rounded-xl p-2"
-                            src={imageUrl}
-                            alt={name}
-                            fill
-                            style={{objectFit: 'cover'}} // Ensures the image covers the entire container
-                        />
+                {/*
+                    <div
+                        className="bg-blue-gray-500 shadow-blue-gray-500/40 relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-border text-white shadow-lg">
+                        <div className="relative w-full h-full">
+                            <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true"></div>
+                            <Image
+                                className="rounded-xl p-2"
+                                src={imageUrl}
+                                alt={name}
+                                fill
+                                style={{objectFit: 'cover'}} // Ensures the image covers the entire container
+                            />
+                        </div>
                     </div>
-                </div>
+                */}
+                <ImageWithModal name={name} imageUrl={imageUrl} />
                 <div className="p-6">
                     <h5 className="text-blue-gray-900 font-sans2 mb-2 block text-xl font-semibold leading-snug tracking-normal antialiased">
                         {name}

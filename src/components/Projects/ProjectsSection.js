@@ -19,10 +19,10 @@ const ProjectSection = () => {
         },
         {
             index: 1,
-            name: "Arcade Adventures",
-            description: "An arcade game made that can be run on the browser",
-            imageUrl: getAssetPath('./projects/arcade.png'),
-            demoUrl: 'https://bytejutsu.github.io/platformer/',
+            name: "Quick POS",
+            description: "A POS system for Prestashop. Simple to use and complete in features",
+            imageUrl: getAssetPath('./projects/quickpos.png'),
+            demoUrl: 'https://bytejutsu.com',
         },
         {
             index: 2,
