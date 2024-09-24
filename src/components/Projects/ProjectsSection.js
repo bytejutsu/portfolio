@@ -44,11 +44,12 @@ const ProjectSection = () => {
         },
         {
             index: 4,
-            name: "Arcade Adventures",
-            description: "An arcade game made that can be run on the browser",
-            imageUrl: getAssetPath('./projects/arcade.png'),
-            demoAvailable: true,
-            demoUrl: 'https://bytejutsu.github.io/platformer/',
+            name: "Tax Stamp",
+            description: "A Prestashop module to add a tax stamp in order to comply with tax regulations",
+            //description: "A Prestashop module to add a tax stamp in order to comply with tax regulation of certain countries",
+            imageUrl: getAssetPath('./projects/taxstamp.png'),
+            demoAvailable: false,
+            demoUrl: 'https://bytejutsu.com',
         },
     ]
 
