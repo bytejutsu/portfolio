@@ -37,7 +37,7 @@ export default function ImageWithModal({ imageUrl, name }) {
                 {/* Modal panel */}
                 <div className="fixed inset-0 flex items-center justify-center p-4">
                     <Dialog.Panel className="mx-auto w-[80vw] h-[80vh] max-w-none rounded bg-white p-4 flex flex-col">
-                        <Dialog.Title className="text-lg font-medium text-black mb-2">{name}</Dialog.Title>
+                        <Dialog.Title className="text-lg font-bold text-black mb-2 font-sans2">{name}</Dialog.Title>
 
                         {/* Image with dynamic size */}
                         <div className="flex-grow relative">

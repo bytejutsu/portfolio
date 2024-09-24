@@ -37,7 +37,7 @@ const ProjectSection = () => {
         {
             index: 3,
             name: "Arcade Adventures",
-            description: "An arcade game made that can be run on the browser",
+            description: "A web based arcade game",
             imageUrl: getAssetPath('./projects/arcade.png'),
             demoAvailable: true,
             demoUrl: 'https://bytejutsu.github.io/platformer/',
