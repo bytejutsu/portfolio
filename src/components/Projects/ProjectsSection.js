@@ -15,6 +15,7 @@ const ProjectSection = () => {
             name: "Arcade Adventures",
             description: "An arcade game made that can be run on the browser",
             imageUrl: getAssetPath('./projects/arcade.png'),
+            demoAvailable: true,
             demoUrl: 'https://bytejutsu.github.io/platformer/',
         },
         {
@@ -22,20 +23,23 @@ const ProjectSection = () => {
             name: "Quick POS",
             description: "A POS system for Prestashop. Simple to use and complete in features",
             imageUrl: getAssetPath('./projects/quickpos.png'),
+            demoAvailable: false,
             demoUrl: 'https://bytejutsu.com',
         },
         {
             index: 2,
-            name: "Arcade Adventures",
-            description: "An arcade game made that can be run on the browser",
-            imageUrl: getAssetPath('./projects/arcade.png'),
-            demoUrl: 'https://bytejutsu.github.io/platformer/',
+            name: "XBoard",
+            description: "A web based app for painting and doodling",
+            imageUrl: getAssetPath('./projects/xboard.png'),
+            demoAvailable: true,
+            demoUrl: 'https://bytejutsu.github.io/xboard/',
         },
         {
             index: 3,
             name: "Arcade Adventures",
             description: "An arcade game made that can be run on the browser",
             imageUrl: getAssetPath('./projects/arcade.png'),
+            demoAvailable: true,
             demoUrl: 'https://bytejutsu.github.io/platformer/',
         },
         {
@@ -43,6 +47,7 @@ const ProjectSection = () => {
             name: "Arcade Adventures",
             description: "An arcade game made that can be run on the browser",
             imageUrl: getAssetPath('./projects/arcade.png'),
+            demoAvailable: true,
             demoUrl: 'https://bytejutsu.github.io/platformer/',
         },
     ]

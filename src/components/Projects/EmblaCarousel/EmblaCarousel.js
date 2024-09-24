@@ -51,6 +51,7 @@ const EmblaCarousel = (props) => {
                                 name={project.name}
                                 description={project.description}
                                 imageUrl={project.imageUrl}
+                                demoAvaiable={project.demoAvailable}
                                 demoUrl={project.demoUrl}
                                 index={project.index}
                             />

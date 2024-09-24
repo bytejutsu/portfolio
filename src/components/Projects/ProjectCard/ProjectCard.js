@@ -5,7 +5,7 @@ import getAssetPath from "@/utils/getAssetPath"; // Scoped styles
 import Image from 'next/image';
 import ImageWithModal from "@/components/Projects/ProjectCard/ImageWithModal";
 
-const ProjectCard = ({ index, name, description, imageUrl, demoUrl }) => {
+const ProjectCard = ({ index, name, description, imageUrl, demoAvaiable, demoUrl }) => {
     return (
         <div className="p-10 text-center flex flex-row justify-center">
             <div className="relative flex w-full flex-col rounded-sm bg-[#FCEE09] text-gray-700 shadow-md">
@@ -41,7 +41,7 @@ const ProjectCard = ({ index, name, description, imageUrl, demoUrl }) => {
                                 href={demoUrl}
                                 style={{ borderImage: `url(${getAssetPath('./cp-btn-yellow.svg')}) 0 20 fill`, color: '#fcee0a' }}
                             >
-                                Demo Link_
+                                { demoAvaiable ? 'Demo Link_' : 'Contact For Demo_' }
                             </a>
                         </div>
                     </div>
