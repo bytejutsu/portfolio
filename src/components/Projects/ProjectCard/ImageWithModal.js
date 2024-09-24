@@ -1,6 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
-import Image from 'next/image'; // Assuming you're using Next.js Image component
+import Image from 'next/image';
+import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton"; // Assuming you're using Next.js Image component
 
 export default function ImageWithModal({ imageUrl, name }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,13 +43,14 @@ export default function ImageWithModal({ imageUrl, name }) {
                         <div className="flex-grow relative">
                             <Image src={imageUrl} alt={name} fill className="rounded-md object-contain" />
                         </div>
-
-                        <button
-                            onClick={() => setIsOpen(false)}
-                            className="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded"
-                        >
-                            Close
-                        </button>
+                        <div className="flex flex-row justify-center font-sans2">
+                            <CyberpunkButton
+                                onClick={() => setIsOpen(false)}
+                                buttonStyles={{width:'50%', backgroundColor: 'black'}}
+                            >
+                                Close
+                            </CyberpunkButton>
+                        </div>
                     </Dialog.Panel>
                 </div>
             </Dialog>
