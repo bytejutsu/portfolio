@@ -89,12 +89,12 @@ export default function ChatbotWrapper() {
 
     const flow={
         start: {
-            message: "Hello there! What is your name?",
+            message: "Hello there I am Apex the Chatbot of ByteJutsu! What should I call you?",
             function: (params) => setForm({...form, name: params.userInput}),
             path: "ask_role"
         },
         ask_role: {
-            message: (params) => `Nice to meet you ${params.userInput}, what is your current role?`,
+            message: (params) => `Nice to meet you ${params.userInput}, what is your current role or job?`,
             function: (params) => setForm({...form, role: params.userInput}),
             path: "ask_customer"
         },
