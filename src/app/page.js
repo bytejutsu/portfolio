@@ -26,7 +26,7 @@ export default function Home() {
               <ThreeDimensionSection/>
               <ContactSection/>
           </main>
-          <div className="z-51">
+          <div className="z-51"> {/* z index should be greater than the one of the navbar in order to be able to display the chatbot over the navbar on mobile devices*/}
               <ChatbotWrapper/>
           </div>
           <div className="bg-primary">
