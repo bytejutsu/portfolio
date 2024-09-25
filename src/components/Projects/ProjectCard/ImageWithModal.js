@@ -20,7 +20,7 @@ export default function ImageWithModal({ imageUrl, name }) {
                         src={imageUrl}
                         alt={name}
                         fill
-                        style={{ objectFit: 'cover' }} // Ensures the image covers the entire container
+                        style={{ objectFit: 'fill' }} // Ensures the image covers the entire container
                     />
                 </div>
             </div>
