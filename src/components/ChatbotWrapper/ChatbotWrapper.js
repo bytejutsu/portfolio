@@ -46,9 +46,22 @@ export default function ChatbotWrapper() {
             primaryColor: '#491d8d',
             secondaryColor: '#FF003C',
             fontFamily: 'Arial, sans-serif',
+
+        },
+        chatButton: {
+            icon: getAssetPath('./apex.svg')
         },
         header: {
             title: <h1 className="font-bold text-lg font-sans2">Apex</h1>
+        },
+        audio: {
+            disabled: true
+        },
+        botBubble: {
+            showAvatar: true
+        },
+        voice: {
+            language: "en-US"
         },
         footer: {
             text: <Image
@@ -57,7 +70,7 @@ export default function ChatbotWrapper() {
                 alt="logo"
                 src={getAssetPath('./logo.svg')}
             />,
-        }
+        },
     };
 
     const sendEmail = () => {
@@ -140,6 +153,8 @@ export default function ChatbotWrapper() {
         },
     }
 
+    const styles = {};
+
     return (
         <>
             {isLoaded && (
@@ -147,6 +162,7 @@ export default function ChatbotWrapper() {
                     <ChatBot
                         settings={settings}
                         flow={flow}
+                        styles={styles}
                     />
                 </Suspense>
             )}
