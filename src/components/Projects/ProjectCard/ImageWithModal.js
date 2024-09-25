@@ -45,7 +45,7 @@ export default function ImageWithModal({ imageUrl, name }) {
                                 src={imageUrl}
                                 alt={name}
                                 fill
-                                style={{ objectFit: 'contain', margin: '2px', padding: '10px' }}
+                                style={{ objectFit: 'fill', margin: '2px', padding: '10px' }}
                             />
                         </div>
                         <div className="flex flex-row justify-center font-sans2">
