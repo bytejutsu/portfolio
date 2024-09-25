@@ -9,12 +9,12 @@ const ProjectCard = ({ index, name, description, imageUrl, demoAvailable, demoUr
     return (
         <div className="p-10 text-center flex flex-row justify-center">
             <div className="relative flex w-full flex-col rounded-sm bg-[#FCEE09] text-gray-700 shadow-md">
-                <ImageWithModal name={name} imageUrl={imageUrl} />
+                <ImageWithModal name={name} imageUrl={imageUrl}/>
                 <div className="p-6">
                     <h5 className="text-blue-gray-900 font-sans2 mb-2 block text-xl font-semibold leading-snug tracking-normal antialiased">
                         {name}
                     </h5>
-                    <p className="block font-sans2 text-base font-light leading-relaxed text-inherit antialiased">
+                    <p className="block font-sans2 text-base font-light leading-relaxed text-inherit antialiased h-24 overflow-hidden overflow-ellipsis">
                         {description}
                     </p>
                 </div>
@@ -36,9 +36,12 @@ const ProjectCard = ({ index, name, description, imageUrl, demoAvailable, demoUr
                                         window.open(demoUrl, '_blank'); // Open demo URL in a new tab
                                     }
                                 }}
-                                style={{ borderImage: `url(${getAssetPath('./cp-btn-yellow.svg')}) 0 20 fill`, color: '#fcee0a' }}
+                                style={{
+                                    borderImage: `url(${getAssetPath('./cp-btn-yellow.svg')}) 0 20 fill`,
+                                    color: '#fcee0a'
+                                }}
                             >
-                                { demoAvailable ? 'Demo Link_' : 'Contact For Demo_' }
+                                {demoAvailable ? 'Demo Link_' : 'Contact For Demo_'}
                             </a>
                         </div>
                     </div>
