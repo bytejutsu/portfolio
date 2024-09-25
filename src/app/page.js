@@ -26,7 +26,7 @@ export default function Home() {
               <ThreeDimensionSection/>
               <ContactSection/>
           </main>
-          <div className="z-10">
+          <div className="z-51">
               <ChatbotWrapper/>
           </div>
           <div className="bg-primary">
