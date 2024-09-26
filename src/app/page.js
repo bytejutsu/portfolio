@@ -34,4 +34,6 @@ export default function Home() {
           </div>
       </div>
     );
+
+    {/* trying to retrigger github actions after reconfiguration */}
 }
